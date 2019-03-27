@@ -11,3 +11,4 @@ getwd()
 dir.create("./nowy folder/folderdalej")
 dir.create("./nowy folder/folderdalej/folderjeszczedalej")
 #komentarz po add w git'cie
+#nastepny
