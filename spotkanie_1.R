@@ -15,6 +15,8 @@ dir.create("./nowy folder/folderdalej/folderjeszczedalej")
 # pierwsza linia
 # druga linia
 # trzecia linia
+# komentarze wielowierszowe tworzymy przez shift+ctrl+c
+
 #funkcje pomocy
 help()
 help('hist')
@@ -22,12 +24,17 @@ help('hist')
 example(plot)
 apropos('test')
 help.search('normality test')
+
 # probny wektor
 Dana<-c(1,2,3,3,4,5,6,6,7,7,7)
 hist(Dana, col='red')
 plot(Dana, col='blue')
+
 #pakiety
 installed.packages()
+install.packages('ggplot2')
+library('ggplot2')
+
 #dzialania matematyczne
 1-1
 1+1
@@ -40,6 +47,7 @@ installed.packages()
 3^2
 sqrt(9)
 16**(1/4)
+
 #przypisanie
 x=2
 x<-21
@@ -55,6 +63,7 @@ assign('variable', 12)
 variable
 rm(variable)
 variable
+
 #typy danych
 class(x)
 y<-'Zmienna'
