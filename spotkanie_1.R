@@ -189,4 +189,102 @@ lista_2[[2]]
 lista_2[[1]]
 lista_3<-list(naszInnyWektror,c(2:5),dane_o_nas)
 lista_3[[2]][[3]]
+lista_4<-list(lista_3,dane_o_nas)
+names(lista_4)<-c('probna_lista', 'osoby_kurs')
 
+lista_4$osoby_kurs$imie
+lista_4$osoby_kurs[3]
+dane_o_nas[3]
+dane_o_nas$imie
+
+lista_4[["probna_lista"]][[1]][[3]]
+lista_4[[1]][[1]][[3]]
+
+#macierze
+
+macias<-matrix(1:10, nrow=5)
+macias
+
+macias<-matrix(1:11, nrow=5)
+
+macias<-matrix(1:10, nrow=5)
+macias
+
+othermacias<-matrix(21:30,nrow = 2)
+othermacias
+
+macias*othermacias
+
+macias*t(othermacias) # t - transpozycja
+
+macias[3,2]
+
+multiMacias<-macias*t(othermacias)
+multiMacias[4,2]
+
+name[8]<-'Ada'
+name
+
+siatka_sali<-matrix(name)
+
+siatka_sali
+
+Nowa_siatka<-matrix(siatka_sali, nrow=2)
+
+Nowa_siatka
+
+Nowa_siatka[2,3]
+
+# tablice
+
+tablica<-array(1:17, dim=c(2,3,4))
+tablica
+
+colnames(tablica)<-c('A','B','C')
+tablica
+rownames(tablica)<-c(1,2)
+tablica
+
+dimnames(tablica)[[3]]<-c('L1', 'L2', 'L3', 'L4')
+tablica
+
+tablica[,,'L4']
+tablica[,,'L3']
+tablica[2,'A','L3']
+
+
+#Dane w R
+
+library(MASS)
+data()
+data()
+
+library(ggplot2)
+data("diamonds")
+
+head(lh)
+tail(lh)
+
+head(mpg)
+
+mpg$year
+
+boxplot(diamonds$price)
+cor(diamonds$carat, diamonds$price)
+
+#pobieranie plików
+
+plikCSV<-read.csv('DaneBadanie.csv', stringsAsFactors = FALSE, dec = ',')
+
+cor(plikCSV$p1, plikCSV$p2)
+
+head(plikCSV)
+
+summary(plikCSV)
+
+plikCSV<-read.csv('DaneBadanie.csv', stringsAsFactors = TRUE, dec = ',')
+
+
+summary(plikCSV)
+
+#dopisac excel
