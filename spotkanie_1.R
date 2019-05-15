@@ -288,3 +288,46 @@ plikCSV<-read.csv('DaneBadanie.csv', stringsAsFactors = TRUE, dec = ',')
 summary(plikCSV)
 
 #dopisac excel
+
+
+#funkcje i petle
+setwd('E:/R_for_Students')
+getwd()
+
+PierwszaFunkcja<-function()
+{
+  return("Oto pierwszy komunikat z pierwszej funkcji")
+}
+
+Porownanie<-function(zmienna)
+{
+  if(zmienna==1)
+  {
+    print("nie mozemy obliczyc poniewaz 1")
+  } else if (zmienna>1 & zmienna<=10)
+  {
+    print("zmienna jest miedzy 2 a 10 tez nie obliczam")
+  } else
+  {
+  return(zmienna*2)
+  }
+}
+
+ifelse(plikCSV$wiek>30,'yes', 'O nie... :(')
+plot(ifelse(plikCSV$p³eæ=="K",plikCSV$p1-1, plikCSV$p1*1))
+
+Wykresy<-function(dane, ID, zmienna)
+{
+  if(length(ID)<30){
+    print("zle badanie")
+  } else if(length(ID)>=30 & length(ID)<60)
+  {
+    plot(zmienna)
+  }else 
+  {
+   hist(zmienna)
+  }
+}
+
+Wykresy(plikCSV, plikCSV$ID, plikCSV$p1)
+
